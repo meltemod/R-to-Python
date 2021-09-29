@@ -130,6 +130,11 @@ if x == 20:
 for i in range(5):
     print(i)
 
+#R:
+# if(x<20){
+#   print("Smaller")
+#}
+
 #------------------------------------------------------------
 # Building Functions
 #------------------------------------------------------------
@@ -139,3 +144,43 @@ def thing():
     print("Fun")
 
 thing()
+
+#R:
+
+# thing = function() {
+#   print("Hello")
+#   print("Fun")
+# }
+# thing()
+
+#-------------------------------------------------------------
+# Strings
+#-------------------------------------------------------------
+
+fruit = "banana"
+letter = fruit[0]
+print(letter) # first letter index is zero, not 1 (not like in R)
+# also, in R, you cannot use [0] to get the letter. You need the strsub() function.
+
+x = len(fruit)
+print(x) # R: nchar(fruit)
+
+#loop that goes through characters of fruit:
+
+fruit = 'banana'
+index = 0
+while (index < len(fruit)):
+    letter = fruit[index]
+    print(index, letter)
+    index = index + 1
+
+# R:
+
+# for (i in 1:nchar(fruit)){
+#    print(i, strsub(fruit,i,i))
+#}
+
+s = "Monty Python"
+print(s[0:4]) #note: up to but not including 4. 0,1,2 and 3. Think of it as "between separators"
+
+#R : s[1:4]

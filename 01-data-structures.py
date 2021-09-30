@@ -184,3 +184,51 @@ s = "Monty Python"
 print(s[0:4]) #note: up to but not including 4. 0,1,2 and 3. Think of it as "between separators"
 
 #R : s[1:4]
+
+
+#----------------------------------------------------------------
+# Opening files
+#----------------------------------------------------------------
+
+handle = open("filename.txt", "r") #read file
+print(handle) #does not print the lines, prints the type of it!
+for h in handle:
+    print(h)
+
+stuff = "Hello\nWorld!"
+print(stuff)
+
+#----------------------------------------------------------------
+# Lists
+#----------------------------------------------------------------
+friends = ['Anne', 'Betty', 'Carl']
+fruits = ['Apple', 'Banana', 'Coconut']
+
+listinlist = [1, [1,2], 3]
+print(listinlist)
+
+for l in listinlist:
+    print(l)
+
+numbers = [4, 8, 12, 36, 47, 90]
+print(len(numbers))
+print(range(len(numbers)))
+
+#slicing Lists
+numbers = [4, 8, 12, 36, 47, 90]
+print(numbers[:3])
+print(numbers[1:4])
+print(numbers[-2])
+print(max(numbers))
+
+stuff = list()
+stuff.append('hello!')
+print(stuff)
+stuff.append('gm!')
+stuff.append('bye!')
+print(stuff)
+stuff.pop(1)
+print(stuff)
+
+stuff.sort()
+print(stuff)

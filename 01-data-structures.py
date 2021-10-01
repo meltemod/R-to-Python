@@ -185,6 +185,15 @@ print(s[0:4]) #note: up to but not including 4. 0,1,2 and 3. Think of it as "bet
 
 #R : s[1:4]
 
+#stripping a String
+left_strip = "           Hello!"
+print(left_strip)
+print(left_strip.lstrip())
+
+right_strip = "Hello!        "
+print(right_strip)  #you might not see it but the white space is there!
+print(right_strip.rstrip())
+
 
 #----------------------------------------------------------------
 # Opening files
@@ -232,3 +241,59 @@ print(stuff)
 
 stuff.sort()
 print(stuff)
+
+#split a String
+sentence = "This is a sentence"
+split = sentence.split()
+print(split)
+print(len(sentence)) #18
+print(len(split)) #4
+print(sentence[0]) #T
+print(split[0]) #This
+
+#you can split by a defined character, like a comma!
+comma_delimiter = "This,is,a,sentence"
+print(comma_delimiter.split(","))
+
+#----------------------------------------------------------------
+# Dictionaries
+#----------------------------------------------------------------
+
+information = dict()
+information["name"] = "Meltem"
+information["gender"] = "female"
+information["state"] = "IN"
+print(information)
+print(information['name'])
+
+#counting with Dictionaries
+counts = dict()
+names = ["Anna", "Becky", "Charlie", "Dennis", "Anna", "Anna", "Charlie", "Becky", "Charlie"]
+for name in names:
+    if name not in counts:
+        counts[name] = 1
+    else:
+        counts[name] = counts[name] + 1
+print(counts)
+
+#get() in Dictionaries
+x = counts.get("Charlie", 0) #if charlie is there, give me the value, otherwise print zero.
+print(x)
+y = counts.get("Meltem", 0) #if charlie is there, give me the value, otherwise print zero.
+print(y)
+
+#simplify the loop above using get():
+counts = dict()
+names = ["Anna", "Becky", "Charlie", "Dennis", "Anna", "Anna", "Charlie", "Becky", "Charlie"]
+for name in names:
+    counts[name] = counts.get(name, 0) + 1
+print(counts)
+
+#Dictionaries and files
+
+#you can count the words in a file by, first, reading the line, and then counting the words in that line
+
+
+#----------------------------------------------------------------
+# Tuples
+#----------------------------------------------------------------
